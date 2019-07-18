@@ -2,6 +2,13 @@
 
 ## Flask Demo
 
+Run the demo:
+
+```
+docker run -d -p 80:5000 skipperkongen/flaskdemo
+open http://localhost
+```
+
 Build and run the demo
 
 ```
