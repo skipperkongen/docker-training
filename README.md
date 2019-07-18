@@ -2,7 +2,13 @@
 
 ## Flask Demo
 
-Run the demo:
+Run full demo (with Redis):
+
+```
+docker-compose up
+```
+
+Run the demo (without Redis):
 
 ```
 docker run -d -p 80:5000 skipperkongen/flaskdemo

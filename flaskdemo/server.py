@@ -33,6 +33,10 @@ def index():
         numhits = '? (counter unavailable)'
     return render_template("index.html", hostname=hostname, numhits=numhits)
 
+@app.route("/slides")
+def slides():
+    return render_template("slides.html")
+
 
 @app.route("/assets/<path:path>")
 def assets(path):
