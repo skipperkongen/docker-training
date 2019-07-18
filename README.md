@@ -6,6 +6,7 @@ Run full demo (with Redis):
 
 ```
 docker-compose up
+# docker-compose up --force-recreate --build   
 ```
 
 Run the demo (without Redis):

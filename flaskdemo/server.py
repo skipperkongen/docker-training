@@ -1,10 +1,8 @@
 from flask import Flask, send_from_directory, render_template
-import redis
 import socket
 
 
 app = Flask(__name__)
-cache = redis.Redis(host='redis', port=6379)
 hostname = socket.gethostname()
 
 
@@ -27,11 +25,7 @@ def error(e):
 
 @app.route("/")
 def index():
-    try:
-        numhits = get_hit_count()
-    except:
-        numhits = '? (counter unavailable)'
-    return render_template("index.html", hostname=hostname, numhits=numhits)
+    return render_template("index.html", hostname=hostname)
 
 @app.route("/slides")
 def slides():

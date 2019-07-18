@@ -4,5 +4,3 @@ services:
     build: flaskdemo
     ports:
       - "80:5000"
-  redis:
-    image: gcr.io/google-containers/redis
